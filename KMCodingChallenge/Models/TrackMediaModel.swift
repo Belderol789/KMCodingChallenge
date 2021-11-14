@@ -9,23 +9,24 @@ import Foundation
 
 struct Track {
     
-    let collectionId: Double
     let artistName: String
-    let collectionName: String
-    let collectionCensoredName: String
-    let collectionViewUrl: String
     let artworkUrl60: String
     let artworkUrl100: String
     let collectionPrice: Double
     let collectionExplicitness: String
-    let trackCount: Int
     let country: String
     let currency: String
     let releaseDate: String
     let primaryGenreName: String
     let previewUrl: String
     
+    
+    var collectionName: String?
+    var collectionCensoredName: String?
+    var collectionViewUrl: String?
+    var collectionId: Double?
     var trackId: Double?
+    var trackCount: Double?
     var trackName: String?
     var trackCensoredName: String?
     var collectionArtistId: Double?

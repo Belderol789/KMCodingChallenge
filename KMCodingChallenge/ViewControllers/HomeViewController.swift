@@ -8,13 +8,19 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    // Variables
+    let dataManager: HomeDataManager = HomeDataManager(apiManager: APIRequestManager())
+    // Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        setupData()
     }
-
-
+    
+    // MARK: - SetupData
+    private func setupData() {
+        dataManager.getMediaModels(media: .movie) { mediaModel in
+            
+        }
+    }
 }
 

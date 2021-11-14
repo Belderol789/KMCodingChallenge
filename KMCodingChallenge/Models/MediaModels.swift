@@ -9,40 +9,41 @@ import Foundation
 
 struct MediaModel: Decodable {
     // Enums - Using enums here because data returns a specific set of names
-    enum WrapperType {
-        case track(kind: TrackKind)
+    enum WrapperType: String {
+        case movie
+        case podcast
+        case music
+        case musicVideo
+        case shortFilm
+        case tvShow
+        case software
+        case ebook
+        case track
         case audiobook
-        
-        private var trackKindRaw: String {
-            switch self {
-            case .track(let kind):
-                return kind.rawValue
-            default:
-                return "" // Unrecognized track kind; send empty string to prevent possible crash
-            }
-        }
+        case all
     }
     enum TrackKind: String {
         case song
         case featureMovie = "feature-movie"
     }
-    // General
+    // Required
     let wrapperType: String // Using String here instead of directly the enum to prevent crashes on possible data changes outside enum cases. With this we can just put string values that don't conform inside the else block
-    let collectionId: Double
     let artistName: String
-    let collectionName: String
-    let collectionCensoredName: String
-    let collectionViewUrl: String
     let artworkUrl60: String
     let artworkUrl100: String
     let collectionPrice: Double
     let collectionExplicitness: String
-    let trackCount: Int
     let country: String
     let currency: String
     let releaseDate: String
     let primaryGenreName: String
     let previewUrl: String
+    // Optional
+    var collectionViewUrl: String?
+    var collectionCensoredName: String?
+    var collectionName: String?
+    var collectionId: Double?
+    var trackCount: Double?
     // AudioBook
     var copyright: String?
     var description: String?

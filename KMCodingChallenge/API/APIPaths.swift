@@ -10,7 +10,7 @@ import Alamofire
 enum APIPaths: URLConvertible {
     case home(baseURL: URL, term: String, country: String, media: String, listAll: Bool)
     
-    private var path: (base: URL, path: String) {
+    private var path: (base: URL?, path: String) {
         switch self {
         case .home(let baseURL, let term, let country, let media, let listAll):
             let all = listAll ? "all" : ""
@@ -19,6 +19,9 @@ enum APIPaths: URLConvertible {
     }
     
     func asURL() throws -> URL {
-        return path.base.appendingPathComponent(path.path)
+        let url = path.base
+        let path = path.path
+        let urlWithPath = url.flatMap { URL(string: $0.absoluteString + path) }
+        return urlWithPath ?? URL(string: "url to error page")!
     }
 }

@@ -25,6 +25,7 @@
 		6CA75F4F27410B9E00ADCCE2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4E27410B9E00ADCCE2 /* Extensions.swift */; };
 		6CA75F5427410DE800ADCCE2 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F5327410DE800ADCCE2 /* HomeDataManager.swift */; };
 		6CA75F562741140400ADCCE2 /* APIPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F552741140400ADCCE2 /* APIPaths.swift */; };
+		6CA75F5A2741262D00ADCCE2 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F592741262D00ADCCE2 /* APIRequestManager.swift */; };
 		739210419B2A0F064560E8C0 /* Pods_KMCodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED33DE9941C8331000ED7C4C /* Pods_KMCodingChallengeTests.framework */; };
 		EDB384192947D5FDFCB74D93 /* Pods_KMCodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99C1575D5AC09324D0D62DD /* Pods_KMCodingChallengeUITests.framework */; };
 		EE9E816B2959C7BE817FD52F /* Pods_KMCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A56BFC3D1D68A0686AFAD /* Pods_KMCodingChallenge.framework */; };
@@ -71,6 +72,7 @@
 		6CA75F4E27410B9E00ADCCE2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6CA75F5327410DE800ADCCE2 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		6CA75F552741140400ADCCE2 /* APIPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPaths.swift; sourceTree = "<group>"; };
+		6CA75F592741262D00ADCCE2 /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		941A56BFC3D1D68A0686AFAD /* Pods_KMCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C09381F6AD38B39A5E487B4 /* Pods-KMCodingChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-KMCodingChallengeUITests/Pods-KMCodingChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA9E296F9DC20BA3C0FBE7F2 /* Pods-KMCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-KMCodingChallenge/Pods-KMCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				6CA75F4827408C2C00ADCCE2 /* APIManager.swift */,
 				6CA75F4A2740961F00ADCCE2 /* APIResponseResult.swift */,
 				6CA75F552741140400ADCCE2 /* APIPaths.swift */,
+				6CA75F592741262D00ADCCE2 /* APIRequestManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				6CA75F1027400C5200ADCCE2 /* HomeViewController.swift in Sources */,
 				6CA75F1627400C5200ADCCE2 /* KMCodingChallenge.xcdatamodeld in Sources */,
 				6CA75F4B2740961F00ADCCE2 /* APIResponseResult.swift in Sources */,
+				6CA75F5A2741262D00ADCCE2 /* APIRequestManager.swift in Sources */,
 				6CA75F4427401E3400ADCCE2 /* TrackMediaModel.swift in Sources */,
 				6CA75F0C27400C5200ADCCE2 /* AppDelegate.swift in Sources */,
 				6CA75F4627401E4E00ADCCE2 /* AudioBookMediaModel.swift in Sources */,
