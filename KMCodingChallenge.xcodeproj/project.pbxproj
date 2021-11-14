@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6CA75F0C27400C5200ADCCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F0B27400C5200ADCCE2 /* AppDelegate.swift */; };
 		6CA75F0E27400C5200ADCCE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F0D27400C5200ADCCE2 /* SceneDelegate.swift */; };
-		6CA75F1027400C5200ADCCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F0F27400C5200ADCCE2 /* ViewController.swift */; };
+		6CA75F1027400C5200ADCCE2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F0F27400C5200ADCCE2 /* HomeViewController.swift */; };
 		6CA75F1327400C5200ADCCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA75F1127400C5200ADCCE2 /* Main.storyboard */; };
 		6CA75F1627400C5200ADCCE2 /* KMCodingChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F1427400C5200ADCCE2 /* KMCodingChallenge.xcdatamodeld */; };
 		6CA75F1827400C5400ADCCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA75F1727400C5400ADCCE2 /* Assets.xcassets */; };
@@ -20,6 +20,14 @@
 		6CA75F4227400F6400ADCCE2 /* MediaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4127400F6400ADCCE2 /* MediaModels.swift */; };
 		6CA75F4427401E3400ADCCE2 /* TrackMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4327401E3400ADCCE2 /* TrackMediaModel.swift */; };
 		6CA75F4627401E4E00ADCCE2 /* AudioBookMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4527401E4E00ADCCE2 /* AudioBookMediaModel.swift */; };
+		6CA75F4927408C2C00ADCCE2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4827408C2C00ADCCE2 /* APIManager.swift */; };
+		6CA75F4B2740961F00ADCCE2 /* APIResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4A2740961F00ADCCE2 /* APIResponseResult.swift */; };
+		6CA75F4F27410B9E00ADCCE2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F4E27410B9E00ADCCE2 /* Extensions.swift */; };
+		6CA75F5427410DE800ADCCE2 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F5327410DE800ADCCE2 /* HomeDataManager.swift */; };
+		6CA75F562741140400ADCCE2 /* APIPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA75F552741140400ADCCE2 /* APIPaths.swift */; };
+		739210419B2A0F064560E8C0 /* Pods_KMCodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED33DE9941C8331000ED7C4C /* Pods_KMCodingChallengeTests.framework */; };
+		EDB384192947D5FDFCB74D93 /* Pods_KMCodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99C1575D5AC09324D0D62DD /* Pods_KMCodingChallengeUITests.framework */; };
+		EE9E816B2959C7BE817FD52F /* Pods_KMCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A56BFC3D1D68A0686AFAD /* Pods_KMCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B661C2EFA0629457A019EDC /* Pods-KMCodingChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-KMCodingChallengeUITests/Pods-KMCodingChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CA75F0827400C5200ADCCE2 /* KMCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA75F0B27400C5200ADCCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CA75F0D27400C5200ADCCE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6CA75F0F27400C5200ADCCE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CA75F0F27400C5200ADCCE2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6CA75F1227400C5200ADCCE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CA75F1527400C5200ADCCE2 /* KMCodingChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KMCodingChallenge.xcdatamodel; sourceTree = "<group>"; };
 		6CA75F1727400C5400ADCCE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +66,19 @@
 		6CA75F4127400F6400ADCCE2 /* MediaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModels.swift; sourceTree = "<group>"; };
 		6CA75F4327401E3400ADCCE2 /* TrackMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMediaModel.swift; sourceTree = "<group>"; };
 		6CA75F4527401E4E00ADCCE2 /* AudioBookMediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookMediaModel.swift; sourceTree = "<group>"; };
+		6CA75F4827408C2C00ADCCE2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		6CA75F4A2740961F00ADCCE2 /* APIResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseResult.swift; sourceTree = "<group>"; };
+		6CA75F4E27410B9E00ADCCE2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6CA75F5327410DE800ADCCE2 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
+		6CA75F552741140400ADCCE2 /* APIPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPaths.swift; sourceTree = "<group>"; };
+		941A56BFC3D1D68A0686AFAD /* Pods_KMCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C09381F6AD38B39A5E487B4 /* Pods-KMCodingChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-KMCodingChallengeUITests/Pods-KMCodingChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA9E296F9DC20BA3C0FBE7F2 /* Pods-KMCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-KMCodingChallenge/Pods-KMCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		B99C1575D5AC09324D0D62DD /* Pods_KMCodingChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMCodingChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE334AA0602630AB78B26E89 /* Pods-KMCodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-KMCodingChallengeTests/Pods-KMCodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D438FDF83D10DF511D70693D /* Pods-KMCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-KMCodingChallenge/Pods-KMCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		D75BEB9045046E4FC78FD660 /* Pods-KMCodingChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCodingChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-KMCodingChallengeTests/Pods-KMCodingChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED33DE9941C8331000ED7C4C /* Pods_KMCodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMCodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9E816B2959C7BE817FD52F /* Pods_KMCodingChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739210419B2A0F064560E8C0 /* Pods_KMCodingChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +102,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB384192947D5FDFCB74D93 /* Pods_KMCodingChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BA383F4BF00722955B3C278 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA9E296F9DC20BA3C0FBE7F2 /* Pods-KMCodingChallenge.debug.xcconfig */,
+				D438FDF83D10DF511D70693D /* Pods-KMCodingChallenge.release.xcconfig */,
+				CE334AA0602630AB78B26E89 /* Pods-KMCodingChallengeTests.debug.xcconfig */,
+				D75BEB9045046E4FC78FD660 /* Pods-KMCodingChallengeTests.release.xcconfig */,
+				4B661C2EFA0629457A019EDC /* Pods-KMCodingChallengeUITests.debug.xcconfig */,
+				9C09381F6AD38B39A5E487B4 /* Pods-KMCodingChallengeUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6CA75EFF27400C5200ADCCE2 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +129,8 @@
 				6CA75F2427400C5400ADCCE2 /* KMCodingChallengeTests */,
 				6CA75F2E27400C5400ADCCE2 /* KMCodingChallengeUITests */,
 				6CA75F0927400C5200ADCCE2 /* Products */,
+				0BA383F4BF00722955B3C278 /* Pods */,
+				BA199DE1D190957D6532E370 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,15 +148,15 @@
 			isa = PBXGroup;
 			children = (
 				6CA75F3E27400EC600ADCCE2 /* AppLaunchDelegates */,
-				6CA75F0F27400C5200ADCCE2 /* ViewController.swift */,
+				6CA75F5227410D9600ADCCE2 /* ViewControllers */,
 				6CA75F3F27400EF000ADCCE2 /* Views */,
 				6CA75F1727400C5400ADCCE2 /* Assets.xcassets */,
 				6CA75F1927400C5400ADCCE2 /* LaunchScreen.storyboard */,
 				6CA75F1C27400C5400ADCCE2 /* Info.plist */,
 				6CA75F1427400C5200ADCCE2 /* KMCodingChallenge.xcdatamodeld */,
-				6CA75F4127400F6400ADCCE2 /* MediaModels.swift */,
-				6CA75F4327401E3400ADCCE2 /* TrackMediaModel.swift */,
-				6CA75F4527401E4E00ADCCE2 /* AudioBookMediaModel.swift */,
+				6CA75F4727408C1D00ADCCE2 /* Models */,
+				6CA75F5027410D8400ADCCE2 /* API */,
+				6CA75F5127410D8A00ADCCE2 /* Support */,
 			);
 			path = KMCodingChallenge;
 			sourceTree = "<group>";
@@ -163,6 +203,53 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		6CA75F4727408C1D00ADCCE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6CA75F4127400F6400ADCCE2 /* MediaModels.swift */,
+				6CA75F4327401E3400ADCCE2 /* TrackMediaModel.swift */,
+				6CA75F4527401E4E00ADCCE2 /* AudioBookMediaModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6CA75F5027410D8400ADCCE2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6CA75F4827408C2C00ADCCE2 /* APIManager.swift */,
+				6CA75F4A2740961F00ADCCE2 /* APIResponseResult.swift */,
+				6CA75F552741140400ADCCE2 /* APIPaths.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6CA75F5127410D8A00ADCCE2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				6CA75F4E27410B9E00ADCCE2 /* Extensions.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		6CA75F5227410D9600ADCCE2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6CA75F0F27400C5200ADCCE2 /* HomeViewController.swift */,
+				6CA75F5327410DE800ADCCE2 /* HomeDataManager.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BA199DE1D190957D6532E370 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				941A56BFC3D1D68A0686AFAD /* Pods_KMCodingChallenge.framework */,
+				ED33DE9941C8331000ED7C4C /* Pods_KMCodingChallengeTests.framework */,
+				B99C1575D5AC09324D0D62DD /* Pods_KMCodingChallengeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CA75F3527400C5400ADCCE2 /* Build configuration list for PBXNativeTarget "KMCodingChallenge" */;
 			buildPhases = (
+				F5C7263B1E4CB7562EFC682F /* [CP] Check Pods Manifest.lock */,
 				6CA75F0427400C5200ADCCE2 /* Sources */,
 				6CA75F0527400C5200ADCCE2 /* Frameworks */,
 				6CA75F0627400C5200ADCCE2 /* Resources */,
+				EE6307DC831BDD38D0DDB65D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CA75F3827400C5400ADCCE2 /* Build configuration list for PBXNativeTarget "KMCodingChallengeTests" */;
 			buildPhases = (
+				070C4BB11D0F72408A11E40D /* [CP] Check Pods Manifest.lock */,
 				6CA75F1D27400C5400ADCCE2 /* Sources */,
 				6CA75F1E27400C5400ADCCE2 /* Frameworks */,
 				6CA75F1F27400C5400ADCCE2 /* Resources */,
@@ -205,6 +295,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CA75F3B27400C5400ADCCE2 /* Build configuration list for PBXNativeTarget "KMCodingChallengeUITests" */;
 			buildPhases = (
+				7888D0B45F8D2D9BC52297A8 /* [CP] Check Pods Manifest.lock */,
 				6CA75F2727400C5400ADCCE2 /* Sources */,
 				6CA75F2827400C5400ADCCE2 /* Frameworks */,
 				6CA75F2927400C5400ADCCE2 /* Resources */,
@@ -289,18 +380,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		070C4BB11D0F72408A11E40D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMCodingChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7888D0B45F8D2D9BC52297A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMCodingChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE6307DC831BDD38D0DDB65D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMCodingChallenge/Pods-KMCodingChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMCodingChallenge/Pods-KMCodingChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KMCodingChallenge/Pods-KMCodingChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C7263B1E4CB7562EFC682F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMCodingChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6CA75F0427400C5200ADCCE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CA75F1027400C5200ADCCE2 /* ViewController.swift in Sources */,
+				6CA75F4927408C2C00ADCCE2 /* APIManager.swift in Sources */,
+				6CA75F5427410DE800ADCCE2 /* HomeDataManager.swift in Sources */,
+				6CA75F1027400C5200ADCCE2 /* HomeViewController.swift in Sources */,
 				6CA75F1627400C5200ADCCE2 /* KMCodingChallenge.xcdatamodeld in Sources */,
+				6CA75F4B2740961F00ADCCE2 /* APIResponseResult.swift in Sources */,
 				6CA75F4427401E3400ADCCE2 /* TrackMediaModel.swift in Sources */,
 				6CA75F0C27400C5200ADCCE2 /* AppDelegate.swift in Sources */,
 				6CA75F4627401E4E00ADCCE2 /* AudioBookMediaModel.swift in Sources */,
 				6CA75F0E27400C5200ADCCE2 /* SceneDelegate.swift in Sources */,
+				6CA75F4F27410B9E00ADCCE2 /* Extensions.swift in Sources */,
 				6CA75F4227400F6400ADCCE2 /* MediaModels.swift in Sources */,
+				6CA75F562741140400ADCCE2 /* APIPaths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +656,7 @@
 		};
 		6CA75F3627400C5400ADCCE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9E296F9DC20BA3C0FBE7F2 /* Pods-KMCodingChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -502,6 +685,7 @@
 		};
 		6CA75F3727400C5400ADCCE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D438FDF83D10DF511D70693D /* Pods-KMCodingChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -530,6 +714,7 @@
 		};
 		6CA75F3927400C5400ADCCE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE334AA0602630AB78B26E89 /* Pods-KMCodingChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -555,6 +740,7 @@
 		};
 		6CA75F3A27400C5400ADCCE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75BEB9045046E4FC78FD660 /* Pods-KMCodingChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -580,6 +766,7 @@
 		};
 		6CA75F3C27400C5400ADCCE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B661C2EFA0629457A019EDC /* Pods-KMCodingChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,6 +790,7 @@
 		};
 		6CA75F3D27400C5400ADCCE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C09381F6AD38B39A5E487B4 /* Pods-KMCodingChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

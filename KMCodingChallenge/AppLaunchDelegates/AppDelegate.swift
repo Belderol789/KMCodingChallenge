@@ -11,9 +11,10 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private let baseUrlString: String = "https://itunes.apple.com"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        APIManager.setupURL(baseUrlString: baseUrlString)
         // Override point for customization after application launch.
         return true
     }
