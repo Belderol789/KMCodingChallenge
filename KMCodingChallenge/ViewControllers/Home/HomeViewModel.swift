@@ -30,13 +30,13 @@ struct HomeViewModel {
         switch type {
         case .track:
             var trackModels: [T] = filteredMediaModels.map({Track(mediaModel: $0) as! T})
-            if let searchText = isSearching?.lowercased() {
+            if let searchText = isSearching?.lowercased() { // check if a searchText is present then filter trackName
                 trackModels = trackModels.filter({($0 as! Track).trackName!.lowercased().contains(searchText)})
             }
             return trackModels
         case .audiobook:
             var audioBooks: [T] = filteredMediaModels.map({AudioBook(mediaModel: $0) as! T})
-            if let searchText = isSearching?.lowercased() {
+            if let searchText = isSearching?.lowercased() { // check if a collectionName is present then filter trackName
                 audioBooks = audioBooks.filter({($0 as! AudioBook).collectionName!.lowercased().contains(searchText)})
             }
             return audioBooks
