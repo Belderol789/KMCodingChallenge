@@ -25,28 +25,40 @@ struct HomeViewModel {
         return Array(set).sorted().map({MediaModel.WrapperType(rawValue: $0) ?? .all})
     }
 
-    func returnWrapperModels<T>(type: MediaModel.WrapperType, resultType: T.Type) -> [T] {
+    func returnWrapperModels<T>(type: MediaModel.WrapperType, resultType: T.Type, isSearching: String?) -> [T] {
         let filteredMediaModels = mediaModels.filter({$0.wrapperType == type.rawValue}).sorted(by: {$0.artistName.lowercased() < $1.artistName.lowercased()})
         switch type {
         case .track:
-            let trackModels = filteredMediaModels.map({Track(mediaModel: $0) as! T})
+            var trackModels: [T] = filteredMediaModels.map({Track(mediaModel: $0) as! T})
+            if let searchText = isSearching?.lowercased() {
+                trackModels = trackModels.filter({($0 as! Track).trackName!.lowercased().contains(searchText)})
+            }
             return trackModels
         case .audiobook:
-            let audioBooks = filteredMediaModels.map({AudioBook(mediaModel: $0) as! T})
+            var audioBooks: [T] = filteredMediaModels.map({AudioBook(mediaModel: $0) as! T})
+            if let searchText = isSearching?.lowercased() {
+                audioBooks = audioBooks.filter({($0 as! AudioBook).collectionName!.lowercased().contains(searchText)})
+            }
             return audioBooks
         default:
             return []
         }
     }
     
-    func returnWrapperItemCount(type: MediaModel.WrapperType) -> Int {
+    func returnWrapperItemCount(type: MediaModel.WrapperType, isSearching: String?) -> Int {
         let filteredMediaModels = mediaModels.filter({$0.wrapperType == type.rawValue}).sorted(by: {$0.artistName.lowercased() < $1.artistName.lowercased()})
         switch type {
         case .track:
-            let trackModels = filteredMediaModels.map({Track(mediaModel: $0)})
+            var trackModels: [Track] = filteredMediaModels.map({Track(mediaModel: $0)})
+            if let searchText = isSearching?.lowercased() {
+                trackModels = trackModels.filter({$0.trackName!.lowercased().contains(searchText)})
+            }
             return trackModels.count
         case .audiobook:
-            let audioBooks = filteredMediaModels.map({AudioBook(mediaModel: $0)})
+            var audioBooks: [AudioBook] = filteredMediaModels.map({AudioBook(mediaModel: $0)})
+            if let searchText = isSearching?.lowercased() {
+                audioBooks = audioBooks.filter({$0.collectionName!.lowercased().contains(searchText)})
+            }
             return audioBooks.count
         default:
             return 0

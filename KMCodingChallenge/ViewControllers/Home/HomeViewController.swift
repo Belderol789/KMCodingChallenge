@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     var homeViewModel: HomeViewModel?
     // Views
     @IBOutlet weak var mediaCollectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: UITextField!
+    private var searchedText: String?
     // Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,14 @@ class HomeViewController: UIViewController {
         mediaCollectionView.showsHorizontalScrollIndicator = false
     }
     
+    @IBAction func searchBtnTapped(_ sender: UIButton) {
+        if let searchText = searchTextField.text, !searchText.isEmpty {
+            self.searchedText = searchText
+        } else {
+            self.searchedText = nil
+        }
+        mediaCollectionView.reloadData()
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -70,17 +80,17 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let hm = homeViewModel else { return 0 }
         let sectionType = hm.mediaTypes[section]
-        return hm.returnWrapperItemCount(type: sectionType)
+        return hm.returnWrapperItemCount(type: sectionType, isSearching: self.searchedText)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let hm = homeViewModel, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaCollectionViewCell.className, for: indexPath) as? MediaCollectionViewCell else { fatalError("ViewModel is nil or cell isn't registered") }
         switch hm.mediaTypes[indexPath.section] {
         case .track:
-            let track = hm.returnWrapperModels(type: .track, resultType: Track.self)[indexPath.item]
+            let track = hm.returnWrapperModels(type: .track, resultType: Track.self, isSearching: self.searchedText)[indexPath.item]
             cell.setupCell(model: hm.constructMediaCellModel(track: track))
         case .audiobook:
-            let audioBook = hm.returnWrapperModels(type: .audiobook, resultType: AudioBook.self)[indexPath.item]
+            let audioBook = hm.returnWrapperModels(type: .audiobook, resultType: AudioBook.self, isSearching: self.searchedText)[indexPath.item]
             cell.setupCell(model: hm.constructMediaCellMode(audioBook: audioBook))
         default:
             break
@@ -112,5 +122,4 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 30)
     }
-    
 }

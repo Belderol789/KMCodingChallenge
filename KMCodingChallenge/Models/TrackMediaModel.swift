@@ -20,7 +20,6 @@ struct Track {
     let primaryGenreName: String
     let previewUrl: String
     
-    
     var collectionName: String?
     var collectionCensoredName: String?
     var collectionViewUrl: String?
