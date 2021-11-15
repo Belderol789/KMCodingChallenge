@@ -9,7 +9,7 @@ import Foundation
 
 struct MediaModel: Decodable {
     // Enums - Using enums here because data returns a specific set of names
-    enum WrapperType: String {
+    enum WrapperType: String, CaseIterable {
         case movie
         case podcast
         case music

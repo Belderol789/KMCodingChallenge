@@ -12,12 +12,12 @@ import Foundation
 // 3. Communicates with the API Classes
 // 4. Could also handle networking unless a singleton is used
 
+struct APIHomeResponse: Decodable {
+    let resultCount: Double
+    let results: [MediaModel]
+}
+
 class HomeDataManager: NSObject {
-    
-    struct APIHomeResponse: Decodable {
-        let resultCount: Double
-        let results: [MediaModel]
-    }
     
     let apiManager: APIRequestManager
     

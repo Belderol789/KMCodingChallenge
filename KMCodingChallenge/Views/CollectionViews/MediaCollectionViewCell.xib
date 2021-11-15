@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MediaCollectionViewCell" customModule="KMCodingChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-Ai-x9e">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="277"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P200.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-R5-Eng">
+                        <rect key="frame" x="0.0" y="285" width="199" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="FUI-Ia-c0D"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" systemColor="systemGreenColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MM1-l5-t1O">
+                        <rect key="frame" x="0.0" y="237" width="199" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRA-Gv-uIs">
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rs-1t-ccg">
+                                <rect key="frame" x="0.0" y="22" width="199" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffg-Za-biI">
+                        <rect key="frame" x="149" y="8" width="42" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="8kZ-wB-SPl"/>
+                            <constraint firstAttribute="width" constant="42" id="BNF-1d-Mvg"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="didSelectFavouriteBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="enR-oQ-De3"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ffg-Za-biI" secondAttribute="trailing" constant="8" id="6q0-GX-LQF"/>
+                <constraint firstAttribute="trailing" secondItem="MM1-l5-t1O" secondAttribute="trailing" id="C4n-AY-2F7"/>
+                <constraint firstItem="0yc-R5-Eng" firstAttribute="top" secondItem="Qne-Ai-x9e" secondAttribute="bottom" constant="8" id="CbZ-OI-flk"/>
+                <constraint firstAttribute="trailing" secondItem="0yc-R5-Eng" secondAttribute="trailing" id="Kmv-ca-NDC"/>
+                <constraint firstItem="0yc-R5-Eng" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LTm-KE-CAk"/>
+                <constraint firstItem="0yc-R5-Eng" firstAttribute="top" secondItem="MM1-l5-t1O" secondAttribute="bottom" constant="8" id="WtT-KI-ZuM"/>
+                <constraint firstItem="Ffg-Za-biI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="dnU-4f-wgF"/>
+                <constraint firstItem="Qne-Ai-x9e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="grG-QS-32F"/>
+                <constraint firstAttribute="bottom" secondItem="0yc-R5-Eng" secondAttribute="bottom" id="juD-Yn-FDP"/>
+                <constraint firstItem="Qne-Ai-x9e" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="k35-DD-AFg"/>
+                <constraint firstItem="MM1-l5-t1O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pcQ-v8-LFI"/>
+                <constraint firstAttribute="trailing" secondItem="Qne-Ai-x9e" secondAttribute="trailing" id="rxn-8b-Bph"/>
+            </constraints>
+            <size key="customSize" width="199" height="296"/>
+            <connections>
+                <outlet property="favouriteButton" destination="Ffg-Za-biI" id="1yp-kz-SVJ"/>
+                <outlet property="mediaGenreLabel" destination="6rs-1t-ccg" id="rEb-Ue-LGC"/>
+                <outlet property="mediaImageView" destination="Qne-Ai-x9e" id="O4X-hr-XpE"/>
+                <outlet property="mediaPriceLabel" destination="0yc-R5-Eng" id="QCD-Qv-5Ji"/>
+                <outlet property="mediaTitleLabel" destination="LRA-Gv-uIs" id="ZM9-Oh-aRS"/>
+            </connections>
+            <point key="canvasLocation" x="245.6521739130435" y="139.95535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

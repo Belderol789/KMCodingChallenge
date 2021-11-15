@@ -35,8 +35,7 @@ class APIRequestManager: NSObject {
                 let model = try JSONDecoder().decode(responseType, from: data)
                 completionHandler(APIResponseResult<T>(data: model))
             } catch {
-                // Improve error handling
-                print("APIRequestManager: Download error \(error)")
+                
             }
         }
     }

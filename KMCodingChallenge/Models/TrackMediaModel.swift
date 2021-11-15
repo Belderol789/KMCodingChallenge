@@ -46,7 +46,7 @@ struct Track {
     var contentAdvisoryRating: String?
     var shortDescription: String?
     var longDescription: String?
-    
+
     init(mediaModel: MediaModel) {
         self.collectionId = mediaModel.collectionId
         self.artistName = mediaModel.artistName
