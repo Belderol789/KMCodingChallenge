@@ -10,14 +10,6 @@ import Foundation
 struct HomeViewModel {
     
     let homeModel: APIHomeResponse
-    
-    struct MediaCollectionModel {
-        let titleName: String
-        let artwork: String
-        var backupArtwork: String?
-        let price: String
-        let genre: String
-    }
 
     var dataCount: Int {
         return Int(homeModel.resultCount)
@@ -34,7 +26,7 @@ struct HomeViewModel {
     }
 
     func returnWrapperModels<T>(type: MediaModel.WrapperType, resultType: T.Type) -> [T] {
-        let filteredMediaModels = mediaModels.filter({$0.wrapperType == type.rawValue})
+        let filteredMediaModels = mediaModels.filter({$0.wrapperType == type.rawValue}).sorted(by: {$0.artistName.lowercased() < $1.artistName.lowercased()})
         switch type {
         case .track:
             let trackModels = filteredMediaModels.map({Track(mediaModel: $0) as! T})
@@ -48,7 +40,7 @@ struct HomeViewModel {
     }
     
     func returnWrapperItemCount(type: MediaModel.WrapperType) -> Int {
-        let filteredMediaModels = mediaModels.filter({$0.wrapperType == type.rawValue})
+        let filteredMediaModels = mediaModels.filter({$0.wrapperType == type.rawValue}).sorted(by: {$0.artistName.lowercased() < $1.artistName.lowercased()})
         switch type {
         case .track:
             let trackModels = filteredMediaModels.map({Track(mediaModel: $0)})

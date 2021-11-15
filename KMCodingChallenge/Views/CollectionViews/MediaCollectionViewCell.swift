@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 protocol MediaCellProtocol: AnyObject {
-    func didSelectModel(index: IndexPath)
+    func reloadDatabase()
 }
 
 class MediaCollectionViewCell: UICollectionViewCell, Reusable {
@@ -37,13 +37,16 @@ class MediaCollectionViewCell: UICollectionViewCell, Reusable {
             favouriteButton.isSelected = favouriteState
         }
     }
+    var mediaModel: MediaCollectionModel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    public func setupCell(model: HomeViewModel.MediaCollectionModel) {
+    // MARK: - Setup
+    public func setupCell(model: MediaCollectionModel) {
+        mediaModel = model
         mediaImageView.sd_setImage(with: model.artwork.asURL()) { [weak self] image, error, _, _ in
             if image == nil || error != nil {
                 // in case of failure to download image, download the next size
@@ -53,12 +56,35 @@ class MediaCollectionViewCell: UICollectionViewCell, Reusable {
         mediaTitleLabel.text = model.titleName
         mediaGenreLabel.text = model.genre
         mediaPriceLabel.text = "$\(model.price)"
+        
+        let allFavourites = RealmDatabase.shared.getAllObjects(type: RealmMediaModel.self).map({$0.titleName})
+        favouriteState = allFavourites.contains(model.titleName) // This should be a unique identifier, but I couldn't breakdown the JSON enough to find one
+        
+    }
+    
+    public func setupCell(favourite: MediaCollectionModel) {
+        mediaModel = favourite
+        mediaImageView.sd_setImage(with: favourite.artwork.asURL()) { [weak self] image, error, _, _ in
+            if image == nil || error != nil {
+                // in case of failure to download image, download the next size
+                self?.mediaImageView.sd_setImage(with: favourite.backupArtwork?.asURL(), completed: nil)
+            }
+        }
+        mediaTitleLabel.text = favourite.titleName
+        mediaGenreLabel.text = favourite.genre
+        mediaPriceLabel.text = "$\(favourite.price)"
+        favouriteState = true
     }
 
+    // MARK: - @IBAction
     @IBAction func didSelectFavouriteBtn(_ sender: UIButton) {
         sender.isSelected = !favouriteButton.isSelected
         favouriteState = sender.isSelected
-        delegate?.didSelectModel(index: self.indexPath)
+        if sender.isSelected {
+            RealmDatabase.shared.writeToRealm(RealmMediaModel.self, mediaModel: mediaModel)
+        } else {
+            RealmDatabase.shared.deleteFromRealm(mediaModel: mediaModel)
+        }
+        delegate?.reloadDatabase()
     }
-
 }
