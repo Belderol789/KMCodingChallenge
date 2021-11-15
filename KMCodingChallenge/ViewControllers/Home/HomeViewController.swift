@@ -97,6 +97,22 @@ extension HomeViewController: UICollectionViewDataSource {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /// can be improved with custom view rather than alertController
+        guard let hm = homeViewModel else { return }
+        switch hm.mediaTypes[indexPath.section] {
+        case .track:
+            let track = hm.returnWrapperModels(type: .track, resultType: Track.self, isSearching: self.searchedText)[indexPath.item]
+            self.showAlertWith(title: "\(track.trackName ?? "Anonymous")", message: "\(track.longDescription ?? "No description")", defaultBtnTitle: "OK", actions: [])
+        case .audiobook:
+            let audioBook = hm.returnWrapperModels(type: .audiobook, resultType: AudioBook.self, isSearching: self.searchedText)[indexPath.item]
+            self.showAlertWith(title: "\(audioBook.collectionName ?? "Anonymous")", message: "\(audioBook.description ?? "No description")", defaultBtnTitle: "OK", actions: [])
+        default:
+            break
+        }
+    }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
